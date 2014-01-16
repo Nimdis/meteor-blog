@@ -1,2 +1,2 @@
 Template.posts.posts = () ->
-    Posts.find()
+  Posts.find()
