@@ -1,11 +1,15 @@
 <template name="posts">
-  <div class="posts">
-    {{#each posts}}
-    <div class="post">
+  {{#each posts}}
+  <tr class="post">
+    <td>
       {{title}}
+    </td>
+    <td>
       {{author}}
+    </td>
+    <td>
       {{body}}
-    </div>
-    {{/each}}
-  </div>
+    </td>
+  </tr>
+  {{/each}}
 </template>

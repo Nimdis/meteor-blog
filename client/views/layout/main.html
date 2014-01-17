@@ -5,6 +5,18 @@
   <h1>Blog</h1>
   {{>posts_form}}
 
-  {{> posts}}
+  <table class="table">
+  	<thead>
+      <tr>
+        <th>title</th>
+        <th>author</th>
+        <th>body</th>
+      </tr>
+  	</thead>
+    <tbody>
+      {{> posts}}
+    </tbody>
+  </table>
+
 </body>
 
