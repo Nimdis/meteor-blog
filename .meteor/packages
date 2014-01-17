@@ -11,7 +11,8 @@ bootstrap-3
 jquery
 coffeescript
 stylus
-accounts-ui
 Mesosphere
 autoform
 collection2
+accounts-ui-bootstrap-3
+accounts-password

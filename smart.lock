@@ -5,7 +5,8 @@
       "bootstrap-3": {},
       "Mesosphere": {},
       "autoform": {},
-      "collection2": {}
+      "collection2": {},
+      "accounts-ui-bootstrap-3": {}
     },
     "packages": {
       "bootstrap-3": {
@@ -28,6 +29,11 @@
         "tag": "v0.3.3",
         "commit": "d5c99b1c0fe30778e683175ecb0dd36529e6271e"
       },
+      "accounts-ui-bootstrap-3": {
+        "git": "https://github.com/mangasocial/meteor-accounts-ui-bootstrap-3.git",
+        "tag": "v0.2.4",
+        "commit": "cdbd20eb065310c0cc302bbd5f22e5b2121c769a"
+      },
       "underscore-string-latest": {
         "git": "https://github.com/TimHeckel/meteor-underscore-string.git",
         "tag": "v2.3.3",
@@ -35,8 +41,8 @@
       },
       "simple-schema": {
         "git": "https://github.com/aldeed/meteor-simple-schema.git",
-        "tag": "v0.2.28",
-        "commit": "29f3a54be67e9b988ad59994ffa152d9559e4695"
+        "tag": "v0.2.29",
+        "commit": "dc40caf4eaaeb456e1a4e7e227ad326bcd5607b5"
       },
       "moment": {
         "git": "https://github.com/acreeger/meteor-moment.git",
