@@ -10,6 +10,11 @@
     <td>
       {{body}}
     </td>
+    <td>
+      {{#autoForm schema="Posts" doc=this}}
+        <button type="submit" class="btn btn-primary remove">Delete</button>
+      {{/autoForm}}
+    </td>
   </tr>
   {{/each}}
 </template>

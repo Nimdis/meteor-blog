@@ -6,7 +6,6 @@ Template.posts_form.selectedPost = () ->
 
 Template.posts.events
   'click .post' : (e) ->
-      e.preventDefault()
-      Session.set "selectedPost", this._id
-      $('.active').removeClass('active')
-      $(e.target).closest('tr').addClass('active')
+    Session.set "selectedPost", this._id
+    $('.posts .active').removeClass('active')
+    $(e.target).closest('tr').addClass('active')
