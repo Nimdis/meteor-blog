@@ -1,36 +1,38 @@
 <template name="posts_form">
-  {{#autoForm schema="Posts" doc=selectedPost id="posts_form"}}
-    <fieldset>
-      <legend>Add a post</legend>
-      <p class="form-group{{#if afFieldIsInvalid 'title'}} has-error{{/if}}">
-        {{afFieldLabel 'title'}}
-        {{afFieldInput 'title'}}
-        {{#if afFieldIsInvalid 'title'}}
-        <span class="help-block">{{afFieldMessage 'title'}}</span>
-        {{/if}}
-      </p>
+  {{#if isUser}}
+    {{#autoForm schema="Posts" doc=selectedPost id="posts_form"}}
+      <fieldset>
+        <legend>Add a post</legend>
+        <p class="form-group{{#if afFieldIsInvalid 'title'}} has-error{{/if}}">
+          {{afFieldLabel 'title'}}
+          {{afFieldInput 'title'}}
+          {{#if afFieldIsInvalid 'title'}}
+          <span class="help-block">{{afFieldMessage 'title'}}</span>
+          {{/if}}
+        </p>
 
-      <p class="form-group{{#if afFieldIsInvalid 'author'}} has-error{{/if}}">
-        {{afFieldLabel 'author'}}
-        {{afFieldInput 'author'}}
-        {{#if afFieldIsInvalid 'author'}}
-        <span class="help-block">{{afFieldMessage 'author'}}</span>
-        {{/if}}
-      </p>
+        <p class="form-group{{#if afFieldIsInvalid 'author'}} has-error{{/if}}">
+          {{afFieldLabel 'author'}}
+          {{afFieldInput 'author'}}
+          {{#if afFieldIsInvalid 'author'}}
+          <span class="help-block">{{afFieldMessage 'author'}}</span>
+          {{/if}}
+        </p>
 
-      <p class="form-group{{#if afFieldIsInvalid 'body'}} has-error{{/if}}">
-        {{afFieldLabel 'body'}}
-        {{afFieldInput 'body' rows='5'}}
-        {{#if afFieldIsInvalid 'body'}}
-        <span class="help-block">{{afFieldMessage 'body'}}</span>
-        {{/if}}
-      </p>
-    </fieldset>
-    {{#if selectedPost}}
-      <button type="submit" class="btn btn-primary update">Update</button>
-    {{else}}
-      <button type="submit" class="btn btn-primary insert">Insert</button>
-    {{/if}}
-    <button type="reset" class="btn btn-default">Reset</button>
-  {{/autoForm}}
+        <p class="form-group{{#if afFieldIsInvalid 'body'}} has-error{{/if}}">
+          {{afFieldLabel 'body'}}
+          {{afFieldInput 'body' rows='5'}}
+          {{#if afFieldIsInvalid 'body'}}
+          <span class="help-block">{{afFieldMessage 'body'}}</span>
+          {{/if}}
+        </p>
+      </fieldset>
+      {{#if selectedPost}}
+        <button type="submit" class="btn btn-primary update">Update</button>
+      {{else}}
+        <button type="submit" class="btn btn-primary insert">Insert</button>
+      {{/if}}
+      <button type="reset" class="btn btn-default">Reset</button>
+    {{/autoForm}}
+  {{/if}}
 </template>

@@ -4,6 +4,9 @@ Template.posts.posts = () ->
 Template.posts_form.selectedPost = () ->
   Posts.findOne(Session.get("selectedPost"))
 
+Template.posts_form.isUser = () ->
+  Meteor.userId() != null
+
 Template.posts.events
   'click .post' : (e) ->
     Session.set "selectedPost", this._id

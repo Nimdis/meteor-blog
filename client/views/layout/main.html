@@ -2,23 +2,14 @@
 	<title>Blog</title>
 </head>
 <body>
+
   {{>header}}
 
-  {{>posts_form}}
+  <div class="container main">
+    {{>posts_form}}
 
-  <table class="table posts">
-  	<thead>
-      <tr>
-        <th>title</th>
-        <th>author</th>
-        <th>body</th>
-        <th>delete</th>
-      </tr>
-  	</thead>
-    <tbody>
-      {{> posts}}
-    </tbody>
-  </table>
+    {{> posts}}
+  </div>
 
 </body>
 
