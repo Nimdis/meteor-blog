@@ -4,10 +4,6 @@
         type: String
         label: "Title"
 
-      author:
-        type: String
-        label: "Author"
-
       body:
         type: String
         label: "Body"
