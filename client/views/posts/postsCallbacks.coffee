@@ -5,6 +5,7 @@ Meteor.startup () ->
     after:
       insert: (error, result) ->
         if error
-          console.log "error: #{error}"
+          notice_message.show('danger', "Oops! Error: #{error}")
         else
-          console.log 'omfg done'
+          notice_message.show('success', 'Post was created.')
+

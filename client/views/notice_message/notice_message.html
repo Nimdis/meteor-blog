@@ -1,7 +1,9 @@
 <template name="notice_messages">
-{{#if exist}}
-<div class="alert alert-{{type}}">
-  {{body}}
+<div class="js-notifications">
+  {{#if exist}}
+  <div class="alert alert-{{type}}">
+    {{body}}
+  </div>
+  {{/if}}
 </div>
-{{/if}}
 </template>

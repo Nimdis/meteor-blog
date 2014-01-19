@@ -1,14 +1,23 @@
+# success, info, warning, danger
 class NoticeMessage
   constructor: (@type = undefined, @body = undefined) ->
+
   show: (type, body) ->
     @type = type
     @body = body
     if this.exist()
-      $('.alert').fadeIn('slow')
+      block = $('.js-notifications')
+      $('.js-notifications .alert').remove()
+      block.html("<div class='alert alert-#{@type}'>#{@body}</div>")
+      $('.js-notifications .alert').fadeIn('slow')
+      this.hide()
+    true
+
   hide: () ->
     Meteor.setTimeout () ->
       $('.alert').fadeOut('slow')
     , 5000
+
   exist: () ->
     !(_.isUndefined @type && _.isUndefined @body)
 
