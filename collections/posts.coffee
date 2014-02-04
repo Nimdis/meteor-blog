@@ -8,6 +8,14 @@
         type: String
         label: "Body"
 
+      user_id:
+        type: String
+        label: "UserID"
+
+      user_name:
+        type: String
+        label: "UserName"
+
 @Posts.allow
   insert: () ->
     true
